@@ -1,11 +1,13 @@
 const express = require('express');
-const router = require('./routes/index');
+const router = require('./routes');
 
 const app = express();
 const PORT = 8000;
 
 //use express routes
 app.use('/',router);
+// app.use('/users',router);
+
 
 app.listen(PORT,(err)=>{
     if(err){
